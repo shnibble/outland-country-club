@@ -26,7 +26,7 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
-    path: '{{title}}'
+    path: '{{name}}'
     editor:
       preview: false
     fields:
