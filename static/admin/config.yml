@@ -31,8 +31,8 @@ collections:
       preview: false
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Enabled', name: 'enabled', widget: 'boolean', default: 'true', required: true }
-      - { label: 'Officer', name: 'officer', widget: 'boolean', default: 'false', required: true }
+      - { label: 'Enabled', name: 'enabled', widget: 'boolean', default: true, required: true }
+      - { label: 'Officer', name: 'officer', widget: 'boolean', default: false, required: true }
       - { label: 'Officer Title', name: 'officer-title', widget: 'string' }
       - { label: 'Race', name: 'race', widget: 'select', options: ['Human', 'Night Elf', 'Gnome', 'Dwarf', 'Draeni'], required: true }
       - { label: 'Class', name: 'class', widget: 'select', options: ['Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior'], required: true }
