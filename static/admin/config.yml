@@ -9,7 +9,7 @@ collections:
   - name: 'news'
     label: 'News'
     folder: content/news
-    create: false
+    create: true
     media_folder: ''
     public_folder: ''
     path: '{{title}}'
@@ -23,7 +23,7 @@ collections:
   - name: 'members'
     label: 'Members'
     folder: 'content/members'
-    create: false
+    create: true
     media_folder: ''
     public_folder: ''
     path: '{{title}}'
