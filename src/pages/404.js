@@ -6,4 +6,4 @@ const NotFoundPage = () => (
   </div>
 )
 
-export default NoteFoundPage
+export default NotFoundPage
