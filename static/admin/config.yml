@@ -16,7 +16,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Enabled', name: 'enabled', widget: 'boolean' }
+      - { label: 'Enabled', name: 'enabled', widget: 'boolean', default: true }
       - { label: 'Topic', name: 'topic', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime' }

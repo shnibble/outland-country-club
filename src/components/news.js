@@ -37,7 +37,7 @@ const News = ({ condensed=false, limit=0 }) => {
         <StaticQuery
         query={graphql`
             query NewsQuery {
-                allMarkdownRemark(filter: {frontmatter: {enabled: {eq: true}}, fileAbsolutePath: {regex: "/(news)/"}}) {
+                allMarkdownRemark(filter: {frontmatter: {enabled: {eq: true}}, fileAbsolutePath: {regex: "/(news)/"}}, sort: {fields: frontmatter___date, order: DESC}) {
                 nodes {
                     id
                     frontmatter {
