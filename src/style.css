@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+}
+
+html, body {
+    background: #23272a;
+    color: #f2f2f2;
+}

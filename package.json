@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "outland-country-club",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A website for the World of Warcraft guild <Outland Country Club>.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joshua Patterson <joshualpatterson@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/shnibble/outland-country-club/issues"
   },
   "dependencies": {
     "gatsby": "^2.32.8",
@@ -27,6 +27,7 @@
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-remark": "^2.16.1",
     "gatsby-transformer-sharp": "^2.12.0",
+    "moment": "^2.29.1",
     "netlify-cms-app": "^2.14.26",
     "prismjs": "^1.22.0",
     "react": "^16.14.0",
@@ -39,7 +40,7 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://outlandcountry.club",
   "keywords": [
     "gatsby"
   ],
@@ -47,7 +48,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/shnibble/outland-country-club.git"
   },
   "scripts": {
     "build": "gatsby build",
