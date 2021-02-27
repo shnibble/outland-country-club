@@ -1,31 +1,14 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Hero from '../components/hero'
 import Discord from '../components/discord'
 import News from '../components/news'
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <>
     <Hero />
     <Discord />
-    <News data={data} />
+    <News condensed={true} limit={3} />
   </>
 )
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query  {
-    allMarkdownRemark(filter: {frontmatter: {enabled: {eq: true}}, fileAbsolutePath: {regex: "/(news)/"}}) {
-      nodes {
-        id
-        frontmatter {
-          enabled
-          title
-          date
-        }
-        rawMarkdownBody
-      }
-    }
-  }
-`

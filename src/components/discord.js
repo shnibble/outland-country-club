@@ -5,13 +5,24 @@ import Section from './section'
 const Container = styled.div`
     background: #2c2f33;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    height: 250px;
     border-radius: 5px;
-`
 
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+`
+const TitleBlock = styled.div`
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+`
 const Title = styled.h2`
     text-align: center;
     font-size: 32px;
@@ -28,11 +39,11 @@ const Link = styled.a`
 const Discord = () => (
     <Section>
         <Container>
-            <div>
-            <Title>JOIN OUR DISCORD</Title>
-            <Link href='https://discord.gg/X4fgbYJfpG'>https://discord.gg/X4fgbYJfpG</Link>
-            </div>
-            <iframe src="https://discord.com/widget?id=813281725601415199&theme=dark" width="100%" height="100%" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" title='Discord Widget'></iframe>
+            <TitleBlock>
+                <Title>JOIN OUR DISCORD</Title>
+                <Link href='https://discord.gg/X4fgbYJfpG'>https://discord.gg/X4fgbYJfpG</Link>
+            </TitleBlock>
+            <iframe src="https://discord.com/widget?id=813281725601415199&theme=dark" width="100%" height="250px" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" title='Discord Widget'></iframe>
         </Container>
     </Section>
 )
