@@ -38,5 +38,20 @@ collections:
       - { label: 'Race', name: 'race', widget: 'select', options: ['Human', 'Night Elf', 'Gnome', 'Dwarf', 'Draeni'], required: true }
       - { label: 'Class', name: 'class', widget: 'select', options: ['Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior'], required: true }
       - { label: 'Picture', name: 'picture', widget: 'image', required: true }
+  - name: 'events'
+    label: 'Events'
+    folder: 'content/events'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    path: '{{date-title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Enabled', name: 'enabled', widget: 'boolean', default: true, require: true }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Date', name: 'date', widget: 'datetime', required: true }
+      - { label: 'Picture', name: 'picture', widget: 'image', required: false }
+      - { label: 'Description', name: 'description', widget: 'markdown', required: true }
     
       
