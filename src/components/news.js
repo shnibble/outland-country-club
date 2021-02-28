@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import Moment from 'moment'
 import { StaticQuery } from 'gatsby'
 import Section from './section'
+import { FiExternalLink }  from 'react-icons/fi'
+import FancyLink from './fancyLink'
 
 const Title = styled.h2`
     text-align: center;
+    font-size: 32px;
 `
 const Article = styled.article`
     background: #2c2f33;
@@ -30,8 +34,12 @@ const ArticleDate = styled.span`
 const ArticleBody = styled.div`
     padding: 5px;
 `
+const LinkContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`
 
-const News = ({ condensed=false, limit=0 }) => {
+const News = ({ link=false, condensed=false, limit=0 }) => {
     let count = 0;
     return (
         <StaticQuery
@@ -43,7 +51,7 @@ const News = ({ condensed=false, limit=0 }) => {
                     frontmatter {
                     topic
                     title
-                    date(fromNow: true)
+                    date
                     }
                     rawMarkdownBody
                     excerpt
@@ -62,13 +70,14 @@ const News = ({ condensed=false, limit=0 }) => {
                             <ArticleTopic>{news.frontmatter.topic}</ArticleTopic>
                             <ArticleTitle>{news.frontmatter.title}</ArticleTitle>
                             <ArticleBody>{(condensed) ? news.excerpt : news.rawMarkdownBody}</ArticleBody>
-                            <ArticleDate>{news.frontmatter.date}</ArticleDate>
+                            <ArticleDate>{Moment(news.frontmatter.date).format('MMM Do, Y')}</ArticleDate>
                         </Article>        
                         )
                     } else {
                         return null
                     }
-            }))}
+                }))}
+                {(link) ? <LinkContainer><FancyLink to='/news'>more news <FiExternalLink /></FancyLink></LinkContainer> : null }
             </Section>
         )} />
     )
