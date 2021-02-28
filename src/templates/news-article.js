@@ -6,6 +6,7 @@ import Moment from 'moment'
 const Container = styled.article`
     max-width: 900px;
     margin: auto;
+    padding: 15px;
 `
 const Title = styled.h1`
     font-size: 32px;
@@ -14,12 +15,13 @@ const Title = styled.h1`
 `
 const Header = styled.div`
     padding: 15px;
+    color: #999;
 `
 const Date = styled.span`
-    color: #999;
+
 `
 const Topic = styled.span`
-    color: #999;
+
 `
 const Body = styled.div`
     padding: 15px;

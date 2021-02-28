@@ -11,7 +11,7 @@ const IndexPage = () => (
     </Helmet>
     <Hero />
     <Discord />
-    <News link={true} condensed={true} limit={3} />
+    <News link={true} limit={3} />
   </>
 )
 
