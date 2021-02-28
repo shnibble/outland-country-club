@@ -9,7 +9,7 @@ const Container = styled.div`
 
 const Hero = () => (
     <Container>
-        hero image goes here
+        hero image goes here. truff tested her presence here too.
     </Container>
 )
 
