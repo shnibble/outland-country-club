@@ -9,7 +9,7 @@ const MembersPage = ({ data }) => (
             <div>
                 <h3 className={`class-${member.frontmatter.class}`}>{member.frontmatter.name}</h3>
                 <span>{member.frontmatter.race} {member.frontmatter.class}</span>
-                <Img fluid={member.frontmatter.picture.childImageSharp.fluid} />
+                <div><Img fluid={member.frontmatter.picture.childImageSharp.fluid} /></div>
             </div>
         </li>
         ))}
@@ -32,7 +32,7 @@ export const pageQuery = graphql`
           officer_title
           picture {
             childImageSharp {
-              fluid (maxWidth: 500) {
+              fluid (maxWidth: 350, quality: 90) {
                 ...GatsbyImageSharpFluid_noBase64
               }
             }

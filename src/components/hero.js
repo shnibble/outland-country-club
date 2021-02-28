@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import FancyLink from './fancyLink'
+
+
 
 
 const Container = styled.div`
@@ -9,7 +12,8 @@ const Container = styled.div`
 
 const Hero = () => (
     <Container>
-        hero image goes here. truff tested her presence here too.
+        <div>hero image goes here. truff tested her presence here too.</div>
+		<FancyLink to='/members'>Meet our members</FancyLink>
     </Container>
 )
 
