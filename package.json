@@ -8,6 +8,7 @@
     "url": "https://github.com/shnibble/outland-country-club/issues"
   },
   "dependencies": {
+    "@fontsource/seaweed-script": "^4.2.1",
     "gatsby": "^2.32.8",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-feed": "^2.13.1",

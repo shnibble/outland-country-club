@@ -1,8 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { Helmet } from 'react-helmet'
+import Header from '../components/header'
+import Nav from '../components/nav'
 
 const MembersPage = ({ data }) => (
+  <>
+    <Helmet>
+      <title>Outland Country Club</title>
+    </Helmet>
+    <Header />
+    <Nav />
     <ul>
         {(data.allMarkdownRemark.nodes.map(member => 
         <li key={member.id}>
@@ -14,6 +23,7 @@ const MembersPage = ({ data }) => (
         </li>
         ))}
     </ul>
+  </>
 )
 
 export default MembersPage

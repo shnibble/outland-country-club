@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
 import Moment from 'moment'
+import Header from '../components/header'
+import Nav from '../components/nav'
 
 const Container = styled.article`
     max-width: 900px;
@@ -13,7 +15,7 @@ const Title = styled.h1`
     padding: 15px;
     margin: 5px 0;
 `
-const Header = styled.div`
+const ArticleHeader = styled.div`
     padding: 15px;
     color: #999;
 `
@@ -45,11 +47,13 @@ const NewsArticle = ({ data }) => {
             <Helmet>
                 <title>Outland Country Club</title>
             </Helmet>
+            <Header />
+            <Nav />
             <Container>
                 <Title>{article.frontmatter.title}</Title>
-                <Header>
+                <ArticleHeader>
                     <Date>{Moment(article.frontmatter.date).format('MMM Do, Y')}</Date> | <Topic>{article.frontmatter.topic}</Topic>
-                </Header>
+                </ArticleHeader>
                 <Body dangerouslySetInnerHTML={{ __html: article.html }} />
             </Container>
         </>
