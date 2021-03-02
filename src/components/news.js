@@ -5,6 +5,7 @@ import { StaticQuery, Link } from 'gatsby'
 import Section from './section'
 import { FiExternalLink }  from 'react-icons/fi'
 import FancyLink from './fancyLink'
+import { graphql } from 'gatsby'
 
 const Title = styled.h2`
     text-align: center;

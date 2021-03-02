@@ -4,7 +4,7 @@ import Section from './section'
 import { FiExternalLink }  from 'react-icons/fi'
 import FancyLink from './fancyLink'
 import { graphql } from 'gatsby'
-import { StaticQuery, Link } from 'gatsby'
+import { StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 
 const Title = styled.h2`

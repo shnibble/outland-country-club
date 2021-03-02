@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Moment from 'moment'
 import Header from '../components/header'
 import Nav from '../components/nav'
+import { graphql } from 'gatsby'
 
 const Container = styled.article`
     max-width: 900px;
