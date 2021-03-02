@@ -1,4 +1,5 @@
 import "typeface-montserrat"
+import "@fontsource/seaweed-script"
 
 // normalize CSS across browsers
 import "./src/normalize.css"
