@@ -61,7 +61,7 @@ const Members = ({ data }) => (
                 <MemberDisplay>
                     {(data.allMarkdownRemark.nodes.map(member => {
                         //
-                        return <MemberAvatar>
+                        return <MemberAvatar key={member.id}>
                             <Img fluid={member.frontmatter.picture.childImageSharp.fluid} className="rounded-circle"/>
                             <AvatarName>{member.frontmatter.name}</AvatarName>
                         </MemberAvatar>

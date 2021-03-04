@@ -1,24 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import NavButton from './NavButton'
+import logo from '../../content/assets/logo.png'
 
 const Container = styled.nav`
+    position: sticky;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-`
-const StyledLink = styled(Link)`
-    display: block;
-    text-decoration: none;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-gap: 10px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    top: 0px;
+    z-index: 100;
+    background: #23272a;
 `
 
 const Nav = () => {
     return (
         <Container>
-            <StyledLink to='/'>Home</StyledLink>
-            <StyledLink to='/news'>News</StyledLink>
-            <StyledLink to='/events'>Events</StyledLink>
-            <StyledLink to='/members'>Members</StyledLink>
+            <NavButton to='/' text='Home' />
+            <NavButton to='/news' text='News'/>
+            <a href="/"><img src={logo} height="100px"/></a>
+            <NavButton to='/events' text='Events'/>
+            <NavButton to='/members' text='Members'/>
         </Container>
     )
 }
